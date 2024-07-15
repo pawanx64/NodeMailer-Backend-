@@ -24,7 +24,7 @@ exports.signup = async (req, res) => {
     const emailSubject = 'Confirm your email';
     const emailBody = `
       Thank you for registering. Please confirm your email by clicking the link below:
-      http://localhost:5000/api/auth/confirm/${user._id}
+      https://node-mailer-backend.vercel.app/api/auth/confirm/${user._id}
     `;
     sendEmail(user.email, emailSubject, emailBody);
 
