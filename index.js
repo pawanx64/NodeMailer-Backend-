@@ -10,7 +10,11 @@ console.log('EMAIL:', process.env.EMAIL);
 console.log('PASSWORD:', process.env.PASSWORD); 
 
 require('dotenv').config();
-app.use(cors());
+app.use(cors({
+  origin:["https://node-mailer-project-frontend.vercel.app"],
+  methods:["POST","GET"],
+  credentials: true,
+}));
 app.use(express.json());
 
 console.log('Attempting to connect to MongoDB using URI:', process.env.MONGO_URI);
