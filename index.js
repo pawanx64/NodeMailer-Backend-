@@ -5,11 +5,11 @@ const cors = require('cors');
 const authRoutes = require('./Routes/authroutes');
 
 
+require('dotenv').config();
 
 console.log('EMAIL:', process.env.EMAIL);
 console.log('PASSWORD:', process.env.PASSWORD); 
 
-require('dotenv').config();
 app.use(cors({
   origin:["https://node-mailer-project-frontend.vercel.app"],
   methods:["POST","GET"],
