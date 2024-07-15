@@ -11,7 +11,7 @@ console.log('PASSWORD:', process.env.PASSWORD);
 
 require('dotenv').config();
 app.use(cors({
-  origin:["https://node-mailer-project-frontend.vercel.app/"],
+  origin:["https://node-mailer-project-frontend.vercel.app"],
   methods:["POST","GET"],
   credentials: true,
 }));
